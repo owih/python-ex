@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if msg %}
+
+    <h1> Загрузите новый файл </h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <p>
+            <input type="file" name="file">
+            <input type="submit" value="upload">
+        </p>
+    </form>
+
+    <h1>Результат</h1>
+    {% if img_src %}
+    <img src="{{ img_src }}" alt="">
+    {% endif %}
+
+    {% if extracted_text %}
+    {% extracted_text %}
+    <p></p>
+</body>
+</html>
